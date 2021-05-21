@@ -6,24 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hola mundo</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
     <h1>Work</h1>
     <div id="app">
-        <h1>{{user.tittle}}</h1>
-        <h3>{{user.age < 18 ? "No puedes pasar" : " Puedes pasar" }}</h3>
+    
+<ul>
+    <li>{{user.movies[0]}}</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 
-                <!-- <ul>
-            {{
-                for(movie in user.movies){
-                    `<li> ${movie} </li>`
-                }
-            }}
-        </ul> -->
+    
+        <!-- 
+            Parte multiple else if 
+            <h1 v-if="user.age <= 0 || user.age >= 100 " class="rango_err">Fuera de Rango</h1>
+        <h1 v-else-if="user.age > 18  " class="good">Eres Mayor de edad</h1>
+        <h1 v-else="" class="error">No eres mayor de edad</h1> -->
+
+
+        <!-- uso correcto de una condicional 
+<h1 v-if="user.age > 18"  class="good">Eres Mayor de edad</h1>
+<h1 v-else="" class="error">No eres mayor de edad</h1> -->
+
+        <!-- <h1 :class="user.classValue">{{user.tittle}}</h1> -->
+        <!-- Condicionales : El uso de ternerias no es recomendable usar  -->
+        <!-- {{user.age > 18 ?user.classValue = "good" , }} -->
+        <!-- <h1>{{user.tittle}}</h1>
+        <h3>{{user.age < 18 ? "No puedes pasar" : " Puedes pasar" }}</h3>
+        
                 <a v-bind:href=user.url target="__blank">google</a>
-                <img :src=user.image width="300" height="300" alt="">
+                <img :src=user.image width="300" height="300" alt=""> -->
     </div>
     <script src="./main.js"></script>
     <script>
